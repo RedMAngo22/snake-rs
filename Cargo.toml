@@ -1,0 +1,11 @@
+[package]
+name = "snake"
+version = "0.1.0"
+authors = ["Andrew Teesdale <ateesdalejr@users.noreply.github.com>"]
+
+[[bin]]
+name="Snake"
+
+[dependencies]
+sdl2 = "0.30.0"
+rand = "0.3.15"
