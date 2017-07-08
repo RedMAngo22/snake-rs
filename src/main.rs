@@ -81,12 +81,12 @@ fn main() {
         canvas.set_draw_color(Color::RGB(255,255,255));
         canvas.clear();
         canvas.set_draw_color(Color::RGB(0,255,0));
-        canvas.fill_rect(Rect::new(snake_x*15,snake_y*15,15,15));
+        canvas.fill_rect(Rect::new(snake_x*15,snake_y*15,15,15)).unwrap();
         for segment in tail.iter() {
-            canvas.fill_rect(Rect::new(segment.x*15,segment.y*15,15,15));
+            canvas.fill_rect(Rect::new(segment.x*15,segment.y*15,15,15)).unwrap();
         }
         canvas.set_draw_color(Color::RGB(255,0,0));
-        canvas.fill_rect(Rect::new(fruit.x*15,fruit.y*15,15,15));
+        canvas.fill_rect(Rect::new(fruit.x*15,fruit.y*15,15,15)).unwrap();
         canvas.present();
         match snake_dir {
             0 => {snake_y-=1;},

@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Andrew Teesdale <ateesdalejr@users.noreply.github.com>"]
 
 [[bin]]
-name="Snake"
+name="snake"
 
 [dependencies]
 sdl2 = "0.30.0"
