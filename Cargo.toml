@@ -1,10 +1,10 @@
 [package]
-name = "snake"
-version = "0.1.0"
+name = "snake-rs-betas"
+version = "0.0.0"
 authors = ["Andrew Teesdale <ateesdalejr@users.noreply.github.com>"]
 
 [[bin]]
-name="snake"
+name="snake-rs"
 
 [dependencies]
 sdl2 = "0.30.0"
