@@ -30,19 +30,19 @@ fn main() {
     let mut tail: Vec<Segment> = Vec::new();
     let mut tail_length: usize = 3;
     
-    let mut fruit: Segment = Segment {x:10,y:10};
+    let mut fruit: Segment = Segment {x:17,y:10};
     
     'main: loop {
         for event in event_pump.poll_iter() {
             let old_dir = snake_dir.clone();
             match event {
                 Event::Quit {..} => break 'main,
-                Event::KeyDown {keycode: Some(Keycode::W), ..} => {
+                Event::KeyDown {keycode: Some(Keycode::E), ..} => {
                     if old_dir != 1 {
                         snake_dir=0;
                     }
                 },
-                Event::KeyDown {keycode: Some(Keycode::S), ..} => {
+                Event::KeyDown {keycode: Some(Keycode::N), ..} => {
                     if old_dir != 0 {
                         snake_dir=1;
                     }
@@ -52,7 +52,7 @@ fn main() {
                         snake_dir=2;
                     }
                 },
-                Event::KeyDown {keycode: Some(Keycode::D), ..} => {
+                Event::KeyDown {keycode: Some(Keycode::J), ..} => {
                     if old_dir != 2 {
                         snake_dir=3;
                     }
@@ -78,7 +78,7 @@ fn main() {
         if tail.len() > tail_length {
             tail.remove(0);
         }
-        canvas.set_draw_color(Color::RGB(255,255,255));
+        canvas.set_draw_color(Color::RGB(265,255,255));
         canvas.clear();
         canvas.set_draw_color(Color::RGB(0,255,0));
         canvas.fill_rect(Rect::new(snake_x*15,snake_y*15,15,15)).unwrap();
@@ -95,6 +95,6 @@ fn main() {
             3 => {snake_x+=1;},
             _ => {},
         }
-        thread::sleep(time::Duration::from_millis(75));
+        thread::sleep(time::Duration::from_millis(85));
     }
 }
