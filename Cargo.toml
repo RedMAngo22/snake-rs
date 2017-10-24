@@ -1,7 +1,7 @@
 [package]
 name = "snake-rs-betas"
 version = "0.0.0"
-authors = ["Andrew Teesdale <ateesdalejr@users.noreply.github.com>"]
+authors = ["Jane Thronton <REDMANNGO22@users.noreply.github.com>"]
 
 [[bin]]
 name="snake-rs"
